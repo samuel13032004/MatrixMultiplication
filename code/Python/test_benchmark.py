@@ -27,6 +27,7 @@ def test_multiply_matrices(benchmark, n):
     memory_increase = mem_after - mem_before
 
     # Report memory usage
+    print()
     print(f"Matrix size: {n} x {n}")
     print(f"Memory usage before: {mem_before:.2f} MB, after: {mem_after:.2f} MB")
     print(f"Memory increase: {memory_increase:.2f} MB")
