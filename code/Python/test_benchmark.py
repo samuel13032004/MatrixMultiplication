@@ -12,13 +12,13 @@ def test_multiply_matrices(benchmark, n):
         n (int): The size of the matrix (n x n).
     """
     # Measure memory usage before execution
-    mem_before = psutil.Process().memory_info().rss / (1024 * 1024)  # Convertir a MB
+    mem_before = psutil.Process().memory_info().rss / (1024 * 1024) # Convert to Megabyte
 
     # Benchmark the matrix multiplication
     result = benchmark(multiply_matrices, n)
 
     # Measure memory usage after execution
-    mem_after = psutil.Process().memory_info().rss / (1024 * 1024)  # Convertir a MB
+    mem_after = psutil.Process().memory_info().rss / (1024 * 1024)  # Convert to Megabyte
 
     # Ensure the result is not None
     assert result is not None
